@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/stos.dir/src/main.cpp.o  -o stos  libstos_tablica.a inc/libstackList.a inc/libstackNode.a 

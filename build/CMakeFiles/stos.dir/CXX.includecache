@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/stackList.hh
+memory
+-
+stackNode.hh
+../inc/stackNode.hh
+
+../inc/stackNode.hh
+memory
+-
+
+../inc/stos_tablica.hh
+iostream
+-
+
+/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/main.cpp
+iostream
+-
+stos_tablica.hh
+/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stos_tablica.hh
+stackList.hh
+/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stackList.hh
+
