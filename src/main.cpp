@@ -1,20 +1,21 @@
 #include <iostream>
 #include "stos_tablica.hh"
 #include "stackList.hh"
+#include "socketConnection.hh"
 
 using namespace std;
 
-int main()
+int main(int argc, char *argv[])
 {
-    stackList<int> stosik;
+    char send[] = "Collere";
+    int socketDescriptor;
+    socketConnection serverConn;
 
-    stosik.push(5);
+    serverConn.fill_socket_connection();
+    socketDescriptor = serverConn.create_socket();
+    serverConn.server_read(send);
 
-    std::cout << "Top of the stack: " << stosik.top() << std::endl;
-
-    stosik.push(6);
-    std::cout << "Top of the stack: " << stosik.top() << std::endl;
-    std::cout << stosik.getHead()->getNext()->getElement() << std::endl;
+    cout << send << endl;
 
     return 0;
 }

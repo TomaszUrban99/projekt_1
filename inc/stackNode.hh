@@ -24,6 +24,10 @@ public:
     {
         return _nodeElement;
     }
+    T getElement() const
+    {
+        return _nodeElement;
+    }
 
     void setNext(std::shared_ptr<stackNode<T>> nextElem)
     {

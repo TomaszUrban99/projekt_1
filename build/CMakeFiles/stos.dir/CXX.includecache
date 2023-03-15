@@ -6,8 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../inc/socketConnection.hh
+netinet/in.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/socket.h
+-
+unistd.h
+-
+iostream
+-
+
 ../inc/stackList.hh
 memory
+-
+iostream
 -
 stackNode.hh
 ../inc/stackNode.hh
@@ -27,4 +45,6 @@ stos_tablica.hh
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stos_tablica.hh
 stackList.hh
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stackList.hh
+socketConnection.hh
+/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/socketConnection.hh
 

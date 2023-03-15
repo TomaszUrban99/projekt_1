@@ -49,6 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test1.dir/DependInfo.cmake"
   "CMakeFiles/stos.dir/DependInfo.cmake"
+  "CMakeFiles/socket_server.dir/DependInfo.cmake"
   "CMakeFiles/stos_tablica.dir/DependInfo.cmake"
   "inc/CMakeFiles/stackList.dir/DependInfo.cmake"
   "inc/CMakeFiles/stackNode.dir/DependInfo.cmake"

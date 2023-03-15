@@ -148,6 +148,19 @@ stos/fast:
 .PHONY : stos/fast
 
 #=============================================================================
+# Target rules for targets named socket_server
+
+# Build rule for target.
+socket_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 socket_server
+.PHONY : socket_server
+
+# fast build rule for target.
+socket_server/fast:
+	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/build
+.PHONY : socket_server/fast
+
+#=============================================================================
 # Target rules for targets named stos_tablica
 
 # Build rule for target.
@@ -212,6 +225,33 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/stos.dir/build.make CMakeFiles/stos.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/socketConnection.o: src/socketConnection.cpp.o
+
+.PHONY : src/socketConnection.o
+
+# target to build an object file
+src/socketConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/src/socketConnection.cpp.o
+.PHONY : src/socketConnection.cpp.o
+
+src/socketConnection.i: src/socketConnection.cpp.i
+
+.PHONY : src/socketConnection.i
+
+# target to preprocess a source file
+src/socketConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/src/socketConnection.cpp.i
+.PHONY : src/socketConnection.cpp.i
+
+src/socketConnection.s: src/socketConnection.cpp.s
+
+.PHONY : src/socketConnection.s
+
+# target to generate assembly for a file
+src/socketConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/src/socketConnection.cpp.s
+.PHONY : src/socketConnection.cpp.s
 
 src/stos_tablica.o: src/stos_tablica.cpp.o
 
@@ -278,12 +318,16 @@ help:
 	@echo "... test"
 	@echo "... test1"
 	@echo "... stos"
+	@echo "... socket_server"
 	@echo "... stos_tablica"
 	@echo "... stackList"
 	@echo "... stackNode"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/socketConnection.o"
+	@echo "... src/socketConnection.i"
+	@echo "... src/socketConnection.s"
 	@echo "... src/stos_tablica.o"
 	@echo "... src/stos_tablica.i"
 	@echo "... src/stos_tablica.s"

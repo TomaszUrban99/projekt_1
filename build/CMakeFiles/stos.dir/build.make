@@ -81,6 +81,7 @@ stos: CMakeFiles/stos.dir/src/main.cpp.o
 stos: CMakeFiles/stos.dir/build.make
 stos: libstos_tablica.a
 stos: inc/libstackList.a
+stos: libsocket_server.a
 stos: inc/libstackNode.a
 stos: CMakeFiles/stos.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable stos"

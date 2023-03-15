@@ -6,11 +6,15 @@ set(STOS_TABLICA_HEADLINES inc/stos_tablica.hh)
 add_library(stos_tablica src/stos_tablica.cpp ${STOS_TABLICA_HEADLINES})
 target_include_directories(stos_tablica PRIVATE inc/)
 
+set(SOCKET_FUNCT inc/socketConnection.hh)
+add_library(socket_server src/socketConnection.cpp ${SOCKET_FUNCT})
+target_include_directories(socket_server PRIVATE inc/)
+
 add_subdirectory(inc)
 
-add_executable(stos src/main.cpp ${STOS_TABLICA_HEADLINES})
+add_executable(stos src/main.cpp ${STOS_TABLICA_HEADLINES} ${SOCKET_FUNCT})
 target_include_directories(stos PRIVATE inc/)
-target_link_libraries(stos stos_tablica stackList)
+target_link_libraries(stos stos_tablica stackList socket_server)
 
 
 
