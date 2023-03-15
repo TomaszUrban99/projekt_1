@@ -26,16 +26,11 @@ socketConnection &socketConnection::fill_socket_connection()
         exit(LISTEN_FAILED);
     }
 
-    std::cout << "socket: " << socket_descriptor << std::endl;
-
     return *this;
 }
 
 int socketConnection::create_socket()
 {
-    std::cout << "port number: " << PORTNUMBER << std::endl;
-    std::cout << "socket: " << socket_descriptor << std::endl;
-    std::cout << "address: " << address.sin_port << std::endl;
     int new_socket = accept(socket_descriptor,
                             (struct sockaddr *)&address, (socklen_t *)&address_len);
 

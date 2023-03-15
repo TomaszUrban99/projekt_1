@@ -8,14 +8,14 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     char send[] = "Collere";
+    char received[] = "Collere";
+    char end = 'q';
     int socketDescriptor;
     socketConnection serverConn;
 
     serverConn.fill_socket_connection();
     socketDescriptor = serverConn.create_socket();
     serverConn.server_read(send);
-
-    cout << send << endl;
 
     return 0;
 }
