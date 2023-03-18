@@ -41,6 +41,12 @@ iostream
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/main.cpp
 iostream
 -
+fstream
+-
+sys/stat.h
+-
+memory
+-
 stos_tablica.hh
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stos_tablica.hh
 stackList.hh
