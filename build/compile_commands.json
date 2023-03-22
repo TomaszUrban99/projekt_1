@@ -1,0 +1,31 @@
+[
+{
+  "directory": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+  "command": "/usr/bin/g++   -I../inc  -g   -o CMakeFiles/test1.dir/tests/test1.cpp.o -c /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/tests/test1.cpp",
+  "file": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/tests/test1.cpp"
+},
+
+{
+  "directory": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+  "command": "/usr/bin/g++   -I../inc  -g   -o CMakeFiles/stos.dir/src/main.cpp.o -c /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/main.cpp",
+  "file": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/main.cpp"
+},
+
+{
+  "directory": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+  "command": "/usr/bin/g++   -I../inc  -g   -o CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o -c /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/fileTransfer.cpp",
+  "file": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/fileTransfer.cpp"
+},
+
+{
+  "directory": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+  "command": "/usr/bin/g++   -I../inc  -g   -o CMakeFiles/socket_server.dir/src/socketConnection.cpp.o -c /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/socketConnection.cpp",
+  "file": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/socketConnection.cpp"
+},
+
+{
+  "directory": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+  "command": "/usr/bin/g++   -I../inc  -g   -o CMakeFiles/stos_tablica.dir/src/stos_tablica.cpp.o -c /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stos_tablica.cpp",
+  "file": "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stos_tablica.cpp"
+}
+]

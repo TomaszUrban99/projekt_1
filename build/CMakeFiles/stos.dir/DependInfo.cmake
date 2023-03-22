@@ -18,6 +18,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles/stos_tablica.dir/DependInfo.cmake"
   "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/inc/CMakeFiles/stackList.dir/DependInfo.cmake"
   "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles/socket_server.dir/DependInfo.cmake"
+  "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles/file_transfer.dir/DependInfo.cmake"
   "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/inc/CMakeFiles/stackNode.dir/DependInfo.cmake"
   )
 

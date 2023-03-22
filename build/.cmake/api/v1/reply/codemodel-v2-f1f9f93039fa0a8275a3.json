@@ -1,0 +1,143 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						4,
+						5,
+						6
+					]
+				},
+				{
+					"build" : "inc",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "inc",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "stos",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "file_transfer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-file_transfer-Debug-98d75ca3368c33c44459.json",
+					"name" : "file_transfer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "socket_server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-socket_server-Debug-9676ab5df578821dfee6.json",
+					"name" : "socket_server",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "stackList::@0bbf55e5ea592c3d3cc2",
+					"jsonFile" : "target-stackList-Debug-b1e3d594178ee5d363ee.json",
+					"name" : "stackList",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "stackNode::@0bbf55e5ea592c3d3cc2",
+					"jsonFile" : "target-stackNode-Debug-f3ca2e0eec03b374e1e9.json",
+					"name" : "stackNode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stos::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stos-Debug-256310721b6b4fe4c53c.json",
+					"name" : "stos",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stos_tablica::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stos_tablica-Debug-d707fc25aa44b1174841.json",
+					"name" : "stos_tablica",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test1-Debug-054b5edee171ac56036d.json",
+					"name" : "test1",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build",
+		"source" : "/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

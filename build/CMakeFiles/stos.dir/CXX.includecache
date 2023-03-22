@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../inc/fileTransfer.hh
+iostream
+-
+fstream
+-
+socketConnection.hh
+../inc/socketConnection.hh
+
 ../inc/socketConnection.hh
 netinet/in.h
 -
@@ -53,4 +61,6 @@ stackList.hh
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/stackList.hh
 socketConnection.hh
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/socketConnection.hh
+fileTransfer.hh
+/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/fileTransfer.hh
 

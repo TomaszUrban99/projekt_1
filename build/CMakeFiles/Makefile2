@@ -55,23 +55,28 @@ CMAKE_BINARY_DIR = /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build
 # The main recursive "all" target.
 all: CMakeFiles/test1.dir/all
 all: CMakeFiles/stos.dir/all
+all: CMakeFiles/file_transfer.dir/all
 all: CMakeFiles/socket_server.dir/all
 all: CMakeFiles/stos_tablica.dir/all
 all: inc/all
+all: src/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: inc/preinstall
+preinstall: src/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test1.dir/clean
 clean: CMakeFiles/stos.dir/clean
+clean: CMakeFiles/file_transfer.dir/clean
 clean: CMakeFiles/socket_server.dir/clean
 clean: CMakeFiles/stos_tablica.dir/clean
 clean: inc/clean
+clean: src/clean
 
 .PHONY : clean
 
@@ -96,13 +101,31 @@ inc/clean: inc/CMakeFiles/stackNode.dir/clean
 .PHONY : inc/clean
 
 #=============================================================================
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all:
+
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall:
+
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean:
+
+.PHONY : src/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test1.dir
 
 # All Build rule for target.
 CMakeFiles/test1.dir/all: CMakeFiles/stos_tablica.dir/all
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/depend
 	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=9,10 "Built target test1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=11,12 "Built target test1"
 .PHONY : CMakeFiles/test1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -126,18 +149,19 @@ CMakeFiles/test1.dir/clean:
 # Target rules for target CMakeFiles/stos.dir
 
 # All Build rule for target.
+CMakeFiles/stos.dir/all: CMakeFiles/file_transfer.dir/all
 CMakeFiles/stos.dir/all: CMakeFiles/socket_server.dir/all
 CMakeFiles/stos.dir/all: CMakeFiles/stos_tablica.dir/all
 CMakeFiles/stos.dir/all: inc/CMakeFiles/stackList.dir/all
 CMakeFiles/stos.dir/all: inc/CMakeFiles/stackNode.dir/all
 	$(MAKE) -f CMakeFiles/stos.dir/build.make CMakeFiles/stos.dir/depend
 	$(MAKE) -f CMakeFiles/stos.dir/build.make CMakeFiles/stos.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=5,6 "Built target stos"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=7,8 "Built target stos"
 .PHONY : CMakeFiles/stos.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/stos.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/stos.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles 0
 .PHONY : CMakeFiles/stos.dir/rule
@@ -153,13 +177,40 @@ CMakeFiles/stos.dir/clean:
 .PHONY : CMakeFiles/stos.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/file_transfer.dir
+
+# All Build rule for target.
+CMakeFiles/file_transfer.dir/all:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/depend
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=1,2 "Built target file_transfer"
+.PHONY : CMakeFiles/file_transfer.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/file_transfer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/file_transfer.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles 0
+.PHONY : CMakeFiles/file_transfer.dir/rule
+
+# Convenience name for target.
+file_transfer: CMakeFiles/file_transfer.dir/rule
+
+.PHONY : file_transfer
+
+# clean rule for target.
+CMakeFiles/file_transfer.dir/clean:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/clean
+.PHONY : CMakeFiles/file_transfer.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/socket_server.dir
 
 # All Build rule for target.
 CMakeFiles/socket_server.dir/all:
 	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/depend
 	$(MAKE) -f CMakeFiles/socket_server.dir/build.make CMakeFiles/socket_server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=1,2 "Built target socket_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=3,4 "Built target socket_server"
 .PHONY : CMakeFiles/socket_server.dir/all
 
 # Build rule for subdir invocation for target.
@@ -186,7 +237,7 @@ CMakeFiles/socket_server.dir/clean:
 CMakeFiles/stos_tablica.dir/all:
 	$(MAKE) -f CMakeFiles/stos_tablica.dir/build.make CMakeFiles/stos_tablica.dir/depend
 	$(MAKE) -f CMakeFiles/stos_tablica.dir/build.make CMakeFiles/stos_tablica.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=7,8 "Built target stos_tablica"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=9,10 "Built target stos_tablica"
 .PHONY : CMakeFiles/stos_tablica.dir/all
 
 # Build rule for subdir invocation for target.
@@ -213,7 +264,7 @@ CMakeFiles/stos_tablica.dir/clean:
 inc/CMakeFiles/stackList.dir/all: inc/CMakeFiles/stackNode.dir/all
 	$(MAKE) -f inc/CMakeFiles/stackList.dir/build.make inc/CMakeFiles/stackList.dir/depend
 	$(MAKE) -f inc/CMakeFiles/stackList.dir/build.make inc/CMakeFiles/stackList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=3 "Built target stackList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=5 "Built target stackList"
 .PHONY : inc/CMakeFiles/stackList.dir/all
 
 # Build rule for subdir invocation for target.
@@ -240,7 +291,7 @@ inc/CMakeFiles/stackList.dir/clean:
 inc/CMakeFiles/stackNode.dir/all:
 	$(MAKE) -f inc/CMakeFiles/stackNode.dir/build.make inc/CMakeFiles/stackNode.dir/depend
 	$(MAKE) -f inc/CMakeFiles/stackNode.dir/build.make inc/CMakeFiles/stackNode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=4 "Built target stackNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/build/CMakeFiles --progress-num=6 "Built target stackNode"
 .PHONY : inc/CMakeFiles/stackNode.dir/all
 
 # Build rule for subdir invocation for target.

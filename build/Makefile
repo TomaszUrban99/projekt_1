@@ -148,6 +148,19 @@ stos/fast:
 .PHONY : stos/fast
 
 #=============================================================================
+# Target rules for targets named file_transfer
+
+# Build rule for target.
+file_transfer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 file_transfer
+.PHONY : file_transfer
+
+# fast build rule for target.
+file_transfer/fast:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/build
+.PHONY : file_transfer/fast
+
+#=============================================================================
 # Target rules for targets named socket_server
 
 # Build rule for target.
@@ -198,6 +211,33 @@ stackNode: cmake_check_build_system
 stackNode/fast:
 	$(MAKE) -f inc/CMakeFiles/stackNode.dir/build.make inc/CMakeFiles/stackNode.dir/build
 .PHONY : stackNode/fast
+
+src/fileTransfer.o: src/fileTransfer.cpp.o
+
+.PHONY : src/fileTransfer.o
+
+# target to build an object file
+src/fileTransfer.cpp.o:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o
+.PHONY : src/fileTransfer.cpp.o
+
+src/fileTransfer.i: src/fileTransfer.cpp.i
+
+.PHONY : src/fileTransfer.i
+
+# target to preprocess a source file
+src/fileTransfer.cpp.i:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.i
+.PHONY : src/fileTransfer.cpp.i
+
+src/fileTransfer.s: src/fileTransfer.cpp.s
+
+.PHONY : src/fileTransfer.s
+
+# target to generate assembly for a file
+src/fileTransfer.cpp.s:
+	$(MAKE) -f CMakeFiles/file_transfer.dir/build.make CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.s
+.PHONY : src/fileTransfer.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -318,10 +358,14 @@ help:
 	@echo "... test"
 	@echo "... test1"
 	@echo "... stos"
+	@echo "... file_transfer"
 	@echo "... socket_server"
 	@echo "... stos_tablica"
 	@echo "... stackList"
 	@echo "... stackNode"
+	@echo "... src/fileTransfer.o"
+	@echo "... src/fileTransfer.i"
+	@echo "... src/fileTransfer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
