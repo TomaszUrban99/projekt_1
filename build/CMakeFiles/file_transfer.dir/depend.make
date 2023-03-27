@@ -3,5 +3,7 @@
 
 CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o: ../inc/fileTransfer.hh
 CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o: ../inc/socketConnection.hh
+CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o: ../inc/stackList.hh
+CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o: ../inc/stackNode.hh
 CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o: ../src/fileTransfer.cpp
 

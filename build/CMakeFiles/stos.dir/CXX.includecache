@@ -11,6 +11,8 @@ iostream
 -
 fstream
 -
+stackList.hh
+../inc/stackList.hh
 socketConnection.hh
 ../inc/socketConnection.hh
 
@@ -34,6 +36,8 @@ iostream
 memory
 -
 iostream
+-
+fstream
 -
 stackNode.hh
 ../inc/stackNode.hh

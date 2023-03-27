@@ -11,6 +11,8 @@ iostream
 -
 fstream
 -
+stackList.hh
+../inc/stackList.hh
 socketConnection.hh
 ../inc/socketConnection.hh
 
@@ -28,6 +30,20 @@ sys/socket.h
 unistd.h
 -
 iostream
+-
+
+../inc/stackList.hh
+memory
+-
+iostream
+-
+fstream
+-
+stackNode.hh
+../inc/stackNode.hh
+
+../inc/stackNode.hh
+memory
 -
 
 /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/fileTransfer.cpp

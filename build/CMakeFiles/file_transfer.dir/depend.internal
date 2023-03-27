@@ -4,4 +4,6 @@
 CMakeFiles/file_transfer.dir/src/fileTransfer.cpp.o
  ../inc/fileTransfer.hh
  ../inc/socketConnection.hh
+ ../inc/stackList.hh
+ ../inc/stackNode.hh
  /home/tomasz/Documents/Studia/PAMSI/Projekt1/Stos/src/fileTransfer.cpp
