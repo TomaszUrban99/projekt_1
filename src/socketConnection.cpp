@@ -34,20 +34,46 @@ int socketConnection::create_socket()
     int new_socket = accept(socket_descriptor,
                             (struct sockaddr *)&address, (socklen_t *)&address_len);
 
-    std::cout << new_socket << std::endl;
     if (new_socket < 0)
     {
         perror("accept() failed");
         exit(ACCEPT_FAILED);
     }
 
+    socket_descriptor = new_socket;
+
     return new_socket;
 }
 
 int socketConnection::server_read(char server_buffer[])
 {
-    read(socket_descriptor,
-         server_buffer, sizeof(*server_buffer) / sizeof(char));
+    return read(socket_descriptor, server_buffer, 1000);
+}
 
-    return 0;
+int socketConnection::server_send(char character_to_send[], int buflen)
+{
+    int bytesSend = 0;
+
+    bytesSend = send(socket_descriptor, character_to_send,
+                     buflen, 0);
+
+    if (bytesSend < 0)
+    {
+        perror("Send failed()");
+        exit(SEND_FAILED);
+    }
+
+    return bytesSend;
+}
+
+void socketConnection::server_send_number(int number_to_send)
+{
+    int convertedNumber = htonl(number_to_send);
+
+    if (send(socket_descriptor, &convertedNumber,
+             sizeof(convertedNumber), 0) < 1)
+    {
+        perror("Send failed()");
+        exit(SEND_FAILED);
+    }
 }

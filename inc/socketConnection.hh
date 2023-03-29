@@ -19,6 +19,7 @@ constexpr int SOCKET_CREATION_FAILED = 1;
 constexpr int BIND_FAILED = 2;
 constexpr int LISTEN_FAILED = 3;
 constexpr int ACCEPT_FAILED = 4;
+constexpr int SEND_FAILED = 5;
 
 /*!
     Class socketConnection- representing the idea of connection
@@ -38,6 +39,7 @@ class socketConnection
     int address_len;
 
 public:
+    int get_socket_descriptor() { return socket_descriptor; }
     /*!
         socketConnection &fill_socket_connection()- method
         which makes server listening on the given port
@@ -71,7 +73,11 @@ public:
         int server_send()- function for sending messages
         to the connected clients
     */
-    int server_send(char *character_to_send[]);
+    int server_send(char character_to_send[]);
+
+    int server_send(char character_to_send[], int size);
+
+    void server_send_number(int numberToSend);
 };
 
 #endif

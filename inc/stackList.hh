@@ -3,6 +3,7 @@
 
 #include <memory>
 #include <iostream>
+#include <fstream>
 #include "stackNode.hh"
 
 template <class T>
@@ -28,15 +29,22 @@ public:
 
     /* ACCESS TO ATTRIBUTES */
     T &top();
+
+    /*! \brief int top_number()- return the number of top node */
+    int top_number() { return _head->getNodeNumber(); }
+
+    /*! \brief Method returning the shared pointer to the head of list */
     std::shared_ptr<stackNode<T>> getHead();
-    T top() const
-    {
-        return _head->getElement();
-    }
+
+    /*!
+        \brief Method returning the const copy of
+        element stored in the head node
+    */
+    T top() const { return _head->getElement(); }
 
     /* TOOLS FOR THE STACK */
-    void
-    push(T newElem);
+    void push(T newElem);
+    void push(T newElem, int newElemNumber, int newNodeSize);
     T pop();
 };
 
@@ -81,9 +89,22 @@ void stackList<T>::push(T newElem)
 }
 
 template <typename T>
+void stackList<T>::push(T newElem, int newNodeNumber, int newNodeSize)
+{
+    std::shared_ptr<stackNode<T>> newNodePtr(new stackNode<T>(newElem, newNodeNumber, newNodeSize)); // 20
+
+    newNodePtr->setNext(_head); // 4
+    if (_head == NULL) // 6
+    {
+        _tail = newNodePtr;
+    }
+    _head = newNodePtr; // 3
+}
+
+template <typename T>
 T stackList<T>::pop()
 {
-    T elementNode = top();
+    std::shared_ptr<stackNode<T>> elementNode = _head;
     _head = _head->getNext();
 
     return elementNode;
@@ -100,9 +121,15 @@ std::shared_ptr<stackNode<T>> stackList<T>::getHead()
 
 /* OVERLOADED OPERATORS */
 template <typename T>
-std::ofstream &operator<<(std::ofstream &out, stackList<T> &list)
+std::ostream &operator<<(std::ostream &out, stackList<T> &list)
 {
+    std::shared_ptr<stackNode<T>> tmpPtr = list.getHead();
+    while (tmpPtr != NULL)
+    {
+        std::cout << tmpPtr->getElement() << std::endl;
+        tmpPtr = tmpPtr->getNext();
+    }
+
     return out;
 }
-
 #endif

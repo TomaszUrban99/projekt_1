@@ -10,11 +10,16 @@ set(SOCKET_FUNCT inc/socketConnection.hh)
 add_library(socket_server src/socketConnection.cpp ${SOCKET_FUNCT})
 target_include_directories(socket_server PRIVATE inc/)
 
-add_subdirectory(inc)
+set(FILE_TRANSFER inc/fileTransfer.hh)
+add_library(file_transfer src/fileTransfer.cpp ${FILE_TRANSFER})
+target_include_directories(file_transfer PRIVATE inc/)
 
-add_executable(stos src/main.cpp ${STOS_TABLICA_HEADLINES} ${SOCKET_FUNCT})
+add_subdirectory(inc)
+add_subdirectory(src)
+
+add_executable(stos src/main.cpp ${STOS_TABLICA_HEADLINES} ${SOCKET_FUNCT} ${FILE_TRANSFER})
 target_include_directories(stos PRIVATE inc/)
-target_link_libraries(stos stos_tablica stackList socket_server)
+target_link_libraries(stos stos_tablica stackList socket_server file_transfer)
 
 
 
